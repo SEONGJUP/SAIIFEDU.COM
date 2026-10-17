@@ -421,7 +421,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .nums { margin-top: clamp(48px, 6vw, 80px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; text-align: center; }
 .nums b { display: block; font-size: clamp(64px, 9vw, 120px); font-weight: 800; line-height: 1; letter-spacing: -0.05em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-variant-numeric: tabular-nums; }
 .nums p { margin-top: 14px; font-size: 18px; font-weight: 600; color: #D2D2D7; line-height: 1.45; }
-.nums sup a { color: var(--gray-d); text-decoration: none; font-size: 12px; margin-left: 2px; }
 .wide-photo { margin: clamp(60px, 8vw, 100px) 0 0; }
 .wide-photo img { width: 100%; max-height: 72vh; object-fit: cover; }
 .wide-photo figcaption { margin-top: 14px; font-size: 13px; color: var(--gray-d); }
@@ -478,10 +477,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ===================== 푸터 ===================== */
 .foot { background: var(--light); color: var(--gray); font-size: 12px; line-height: 1.6; padding-block: 28px 40px; border-top: 1px solid var(--line); }
-.footnotes { list-style: none; counter-reset: fn; display: grid; gap: 8px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
-.footnotes li { counter-increment: fn; position: relative; padding-left: 16px; }
-.footnotes li:nth-child(-n+3)::before { content: counter(fn) "."; position: absolute; left: 0; }
-.foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; padding-top: 18px; }
+.foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
 .foot-row b { color: var(--ink-2); font-weight: 600; }
 
 /* 동작 줄이기 */
