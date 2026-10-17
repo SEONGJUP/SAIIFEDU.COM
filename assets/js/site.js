@@ -64,16 +64,6 @@
   }
   setStep(1);
 
-  /* ---------- 하이라이트 캐러셀 ---------- */
-  var car = $('#car');
-  $$('.car-btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var card = car.querySelector('.hcard');
-      var step = card ? card.getBoundingClientRect().width + 20 : 380;
-      car.scrollBy({ left: step * Number(b.getAttribute('data-dir')), behavior: reduce ? 'auto' : 'smooth' });
-    });
-  });
-
   /* ---------- 다국어: 언어를 고르면 교안 제목과 자막이 바뀜 (번역 예시) ---------- */
   var L = {
     ko: ['한국어 자막', '표준교안 · 고소작업', '고소작업 안전수칙', '작업 전, 안전대 고리를 먼저 체결하세요'],
