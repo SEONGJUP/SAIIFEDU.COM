@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>세이프에듀 시안 비교</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg: #EEF2F2; --ink: #14211F; --muted: #5A6A68; --card: #FFFFFF; --line: #D6E0DF; --brand: #00A099; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0D1716; --ink: #E6F2F0; --muted: #95AAA7; --card: #142220; --line: #233533; color-scheme: dark; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", sans-serif; }
+  header { padding: 28px max(20px, env(safe-area-inset-left)) 8px; max-width: 1600px; margin: 0 auto; }
+  h1 { margin: 0 0 6px; font-size: 24px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 20px max(20px, env(safe-area-inset-left)) 40px; max-width: 1600px; margin: 0 auto; }
+  .col { display: grid; gap: 10px; min-width: 0; }
+  .col h2 { margin: 0; font-size: 17px; }
+  .col p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .frame { position: relative; height: 72vh; min-height: 480px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+  /* 1280px 데스크톱 화면을 칸 너비에 맞게 축소 */
+  .frame iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 250%; border: 0; transform-origin: 0 0; }
+  .col a { justify-self: start; color: var(--brand); font-weight: 700; text-decoration: none; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>세이프에듀 홈페이지 디자인 시안 비교</h1>
+  <p>같은 내용, 세 가지 디자인. 각 화면 안에서 스크롤해 보고, 마음에 드는 시안을 크게 열어보세요.</p>
+</header>
+<main class="grid">
+  <section class="col">
+    <h2>A · 코퍼레이트</h2>
+    <p>로고 블루와 네이비, 좌우 분할 히어로, 얇은 테두리. 대기업 안전·구매 부서에 신뢰를 주는 정석형.</p>
+    <div class="frame"><iframe src="index.html#a" title="시안 A 미리보기" loading="lazy"></iframe></div>
+    <a href="index.html#a">A 시안 크게 보기 →</a>
+  </section>
+  <section class="col">
+    <h2>B · 세이프 틸</h2>
+    <p>홍보영상과 같은 틸 컬러, 중앙 정렬, 둥근 카드. 영상과 톤이 이어지는 친근한 프로덕트형.</p>
+    <div class="frame"><iframe src="index.html#b" title="시안 B 미리보기" loading="lazy"></iframe></div>
+    <a href="index.html#b">B 시안 크게 보기 →</a>
+  </section>
+  <section class="col">
+    <h2>C · 현장 인더스트리얼</h2>
+    <p>다크 배경에 안전 옐로, 현장 사진 풀블리드와 경고 띠. 전시회·현장 담당자에게 강한 인상을 남기는 현장형.</p>
+    <div class="frame"><iframe src="index.html#c" title="시안 C 미리보기" loading="lazy"></iframe></div>
+    <a href="index.html#c">C 시안 크게 보기 →</a>
+  </section>
+</main>
+<script>
+  function fit() {
+    document.querySelectorAll('.frame').forEach(function (f) {
+      var s = f.clientWidth / 1280, ifr = f.querySelector('iframe');
+      ifr.style.transform = 'scale(' + s + ')';
+      ifr.style.height = (f.clientHeight / s) + 'px';
+    });
+  }
+  window.addEventListener('resize', fit);
+  fit();
+</script>
+</body>
+</html>

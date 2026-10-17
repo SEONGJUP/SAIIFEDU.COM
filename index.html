@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>세이프에듀 SAIIFEDU</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="세이프에듀는 근로자 1인 1태블릿 AI 스마트 안전보건교육 시스템입니다. 본인 확인부터 영상교육, 이해도 평가, 전자서명, 교육일지·참석자 명단·사진대지 자동 생성까지 한 번에.">
+<meta property="og:title" content="세이프에듀 | AI 스마트 안전보건교육 시스템">
+<meta property="og:description" content="교육부터 서류까지, 알아서 완성해드릴게요. 착석부터 현장투입까지 근로자가 직접 진행하는 안전보건교육.">
+<meta property="og:image" content="assets/img/field-tablet.jpg">
+<meta property="og:url" content="https://www.saiifedu.com">
+<script>
+  /* 디자인 시안 선택: #a #b #c 해시 > 저장값 > 기본 b */
+  (function () {
+    var s = (location.hash || '').replace('#', '');
+    if (!/^[abc]$/.test(s)) { try { s = localStorage.getItem('saiifedu-style') || ''; } catch (e) { s = ''; } }
+    if (!/^[abc]$/.test(s)) s = 'b';
+    document.documentElement.setAttribute('data-style', s);
+  })();
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/css/pretendard-embed.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="세이프에듀 홈">
+      <img src="assets/img/logo-safeedu.png" alt="SAIIFEDU" width="851" height="252">
+    </a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="#problem">도입 배경</a>
+      <a href="#steps">5단계 교육</a>
+      <a href="#ai">AI·다국어</a>
+      <a href="#docs">문서 자동화</a>
+      <a href="#proof">도입 사례</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#contact">도입 상담</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO: 홍보영상 엔드카드 슬로건 -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"><img src="assets/img/field-tablet.jpg" alt=""></div>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow">AI 스마트 안전보건교육 시스템</p>
+        <h1>교육부터 서류까지,<br><em>알아서 완성</em>해드릴게요</h1>
+        <p class="lead">세이프에듀는 근로자 1인 1태블릿 방식의 안전보건교육 시스템입니다. 본인 확인, 영상교육, 이해도 평가, 전자서명까지 근로자가 직접 진행하고, 교육일지·참석자 명단·사진대지는 교육이 끝나는 순간 자동으로 만들어집니다.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">도입 상담 신청</a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/watch?v=5XV__Ds61o4" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l10.5-6.5z"/></svg>
+            홍보영상 보기
+          </a>
+        </div>
+        <ul class="hero-facts">
+          <li><b>1:1</b><span>근로자별 태블릿 교육</span></li>
+          <li><b>5단계</b><span>착석부터 수료까지</span></li>
+          <li><b>6개 언어</b><span>외국인 근로자 모국어 교육</span></li>
+          <li><b>자동</b><span>교육일지·명단·사진대지</span></li>
+        </ul>
+      </div>
+      <figure class="hero-media">
+        <img class="hero-photo" src="assets/img/field-tablet.jpg" alt="교육장 좌석의 태블릿으로 안전보건교육을 수강하는 근로자" width="866" height="650">
+        <div class="hero-ui">
+          <img src="assets/img/ui-admin-wide.jpg" alt="세이프에듀 관리자 대시보드 화면" width="746" height="473">
+        </div>
+        <figcaption class="hero-badge"><span class="dot"></span>교육 종료 · 교육일지 자동 생성 완료</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust" aria-label="검증 및 인증">
+    <div class="wrap trust-in">
+      <span class="trust-label">검증 및 인증</span>
+      <ul>
+        <li>현대건설 현장 실증</li>
+        <li>DL이앤씨 현장 실증</li>
+        <li>특허 제10-2765550호</li>
+        <li>국토교통부 스마트건설 강소기업</li>
+        <li>TIPS R&amp;D 선정</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROBLEM: 영상 장면 1 '현장의 고민' -->
+  <section class="sec problem" id="problem">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">건설·산업현장 안전보건교육</p>
+        <h2>협력사마다 다른 교육,<br>언어마다 막히는 교육</h2>
+        <p class="sec-sub">표준화도, 다국어 교육도 현장에선 쉽지 않습니다. 교육은 했는데 기록이 남지 않고, 기록을 남기려면 교육보다 서류가 더 많습니다.</p>
+      </header>
+      <div class="pain-grid">
+        <article class="pain">
+          <span class="pain-tag">협력사 직접 교육</span>
+          <h3>강사·교안마다 내용이 제각각</h3>
+          <p>같은 공종이라도 협력사마다 교육 내용과 깊이가 다릅니다. 원청 기준으로 품질을 맞추기 어렵습니다.</p>
+        </article>
+        <article class="pain">
+          <span class="pain-tag">다국적 근로자 투입</span>
+          <h3>한 명의 강사가 여러 언어로 교육하기 어려움</h3>
+          <p>통역 없이 진행되는 한국어 교육은 위험 정보가 정확히 전달되지 않아 교육의 실효성이 떨어집니다.</p>
+        </article>
+        <article class="pain">
+          <span class="pain-tag">교육보다 많은 서류</span>
+          <h3>출석·서명·사진·일지를 작업 전에 모두 처리</h3>
+          <p>강의 준비부터 교육일지 작성까지 안전관리자가 아침 시간에 혼자 감당합니다. 집중했는지, 이해했는지는 남지 않습니다.</p>
+        </article>
+      </div>
+      <aside class="law">
+        <strong>중대재해처벌법</strong>
+        <p>2024년 1월 27일부터 상시근로자 5인 이상 사업장으로 확대 적용되었습니다. 안전보건교육은 실시 여부와 함께 교육 대상·일시·내용·서명 등 이수 기록의 관리가 요구됩니다.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ANSWER: 영상 장면 1 후반 전환 -->
+  <section class="answer">
+    <div class="wrap answer-in">
+      <p class="eyebrow">세이프에듀의 해답</p>
+      <h2>같은 표준 교안, <em>각자의 언어로</em></h2>
+      <p>외국인 근로자도 동일한 교육을 모국어로 듣고 이해합니다. 강사가 바뀌어도, 협력사가 달라도 교육 내용은 하나의 기준으로 유지됩니다.</p>
+    </div>
+  </section>
+
+  <!-- STEPS: 영상 장면 3 '5단계 흐름' -->
+  <section class="sec steps" id="steps">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">착석부터 현장투입까지</p>
+        <h2>근로자가 직접,<br>교육수강 및 수료까지</h2>
+        <p class="sec-sub">안전관리자가 교육장에 상주하지 않아도 됩니다. 각 단계를 누르면 태블릿 화면이 바뀝니다.</p>
+      </header>
+
+      <div class="steps-body">
+        <ol class="step-list" role="tablist" aria-label="교육 5단계">
+          <li><button role="tab" id="tab-1" aria-controls="screen-1" aria-selected="true"><span class="n">01</span><span class="t">착석·로그인</span><span class="d">좌석별 태블릿에 이름·생년월일·연락처를 입력하고, 등록된 얼굴 사진으로 본인을 확인합니다.</span></button></li>
+          <li><button role="tab" id="tab-2" aria-controls="screen-2" aria-selected="false" tabindex="-1"><span class="n">02</span><span class="t">교육 입과</span><span class="d">공종·작업에 맞는 과정이 미리 배정됩니다. 한 교육장에서 서로 다른 과정을 동시에 운영합니다.</span></button></li>
+          <li><button role="tab" id="tab-3" aria-controls="screen-3" aria-selected="false" tabindex="-1"><span class="n">03</span><span class="t">영상강의</span><span class="d">표준교안 영상을 헤드셋으로 수강합니다. 자막은 근로자의 언어로, 집중도는 AI가 확인합니다.</span></button></li>
+          <li><button role="tab" id="tab-4" aria-controls="screen-4" aria-selected="false" tabindex="-1"><span class="n">04</span><span class="t">테스트</span><span class="d">교육 직후 이해도 평가를 봅니다. 70점 이상이면 통과, 미달 시 최대 3회까지 재응시합니다.</span></button></li>
+          <li><button role="tab" id="tab-5" aria-controls="screen-5" aria-selected="false" tabindex="-1"><span class="n">05</span><span class="t">수료·DB 저장</span><span class="d">전자서명으로 수료를 확인하면 수료증이 발급되고 교육이력이 근로자 DB에 저장됩니다.</span></button></li>
+        </ol>
+
+        <div class="tablet" aria-live="polite">
+          <div class="tablet-screen">
+            <!-- 01 -->
+            <div class="scr" id="screen-1" role="tabpanel" aria-labelledby="tab-1">
+              <p class="scr-title">안전교육 참여</p>
+              <div class="field"><label>이름</label><span>김현장</span></div>
+              <div class="field"><label>생년월일</label><span>1984.05.12</span></div>
+              <div class="field"><label>연락처</label><span>010-****-1234</span></div>
+              <span class="scr-btn">교육 참여하기</span>
+              <p class="scr-note">예시 화면 · 실제 근로자 정보가 아닙니다</p>
+            </div>
+            <!-- 02 -->
+            <div class="scr" id="screen-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+              <p class="scr-title">오늘의 교육</p>
+              <div class="course is-on"><b>신규채용자 안전보건교육</b><span>영상강의 · 테스트</span></div>
+              <div class="course"><b>특별안전보건교육 · 고소작업</b><span>영상강의 · 테스트</span></div>
+              <div class="course"><b>정기안전보건교육</b><span>다국어 자막 지원</span></div>
+              <span class="scr-btn">수강 시작</span>
+            </div>
+            <!-- 03 -->
+            <div class="scr" id="screen-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+              <div class="video">
+                <svg viewBox="0 0 320 150" aria-hidden="true"><rect width="320" height="150" fill="var(--scr-dim)"/><path d="M40 150 L120 60 L170 105 L210 75 L290 150Z" fill="var(--scr-line)"/><circle cx="250" cy="40" r="16" fill="var(--scr-line)"/></svg>
+                <span class="chip-live">시선 추적 중</span>
+                <p class="subtitle"><span class="lang">한국어 자막</span>작업 전, 안전대 고리를 먼저 체결하세요</p>
+              </div>
+              <div class="progress"><span style="width:62%"></span></div>
+              <p class="scr-note">특별안전보건교육 · 고소작업 · 12:40 / 20:00</p>
+            </div>
+            <!-- 04 -->
+            <div class="scr" id="screen-4" role="tabpanel" aria-labelledby="tab-4" hidden>
+              <p class="scr-cap">특별안전보건교육 · 고소작업</p>
+              <p class="scr-title">Q1. 고소작업 시 반드시 착용할 것은?</p>
+              <div class="opt is-right">① 안전대</div>
+              <div class="opt">② 운동화</div>
+              <div class="pass">합격 · 70점 이상 달성</div>
+            </div>
+            <!-- 05 -->
+            <div class="scr" id="screen-5" role="tabpanel" aria-labelledby="tab-5" hidden>
+              <div class="cert">
+                <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="var(--brand)"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="var(--on-brand)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <p class="scr-title">교육 수료</p>
+                <p>수료증 발급 · 교육이력 자동 저장</p>
+                <div class="sign"><svg viewBox="0 0 200 50" aria-hidden="true"><path d="M8 34c18-22 30-24 26-6s10 4 18-10 10 18 26 8 14-14 30-2 24 8 40-6" fill="none" stroke="var(--scr-ink)" stroke-width="2.4" stroke-linecap="round"/></svg><span>전자서명</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI · 다국어: 영상 장면 4 'AI 집중도' -->
+  <section class="sec ai" id="ai">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">AI 영상분석 · 다국어 교육</p>
+        <h2>집중도는 AI가,<br>언어는 근로자에 맞춰</h2>
+      </header>
+      <div class="ai-grid">
+        <article class="ai-card">
+          <div class="ai-visual eye">
+            <img src="assets/img/ui-eyetrack.jpg" alt="태블릿 카메라로 근로자의 화면 주시 여부를 확인하는 집중도 분석 화면" width="474" height="355">
+            <span class="ai-flag">집중이 필요해요 · 영상 일시정지</span>
+          </div>
+          <h3>AI 집중도 분석</h3>
+          <p>시선 추적으로 교육 화면 주시 여부를 확인합니다. 화면을 벗어나면 영상이 멈추고 집중 안내가 표시되며, 집중도가 낮은 구간은 관리자 리포트로 남습니다.</p>
+        </article>
+        <article class="ai-card">
+          <div class="ai-visual lang-demo">
+            <div class="lang-chips" role="group" aria-label="자막 언어 선택">
+              <button type="button" data-lang="ko" aria-pressed="true">한국어</button>
+              <button type="button" data-lang="en" aria-pressed="false">English</button>
+              <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+              <button type="button" data-lang="vi" aria-pressed="false">Tiếng Việt</button>
+              <button type="button" data-lang="ru" aria-pressed="false">Русский</button>
+              <button type="button" data-lang="uz" aria-pressed="false">O‘zbekcha</button>
+            </div>
+            <p class="lang-line" id="lang-line">작업 전, 안전대 고리를 먼저 체결하세요</p>
+            <p class="lang-note">자막 예시 · 언어를 눌러보세요</p>
+          </div>
+          <h3>다국어 교육 콘텐츠</h3>
+          <p>교안 영상 속 문자를 AI로 추출·번역해 같은 위치에 다시 구성합니다. 근로자는 로그인한 언어로 동일한 표준 교육을 듣습니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCS: 영상 장면 5 '문서 자동화' -->
+  <section class="sec docs" id="docs">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">문서 자동생성</p>
+        <h2>서명 한 번,<br>문서는 자동으로</h2>
+        <p class="sec-sub">근로자는 이름·생년월일·연락처만 입력하고 서명합니다. 교육이 끝나면 출력 가능한 서류가 사업장 양식대로 쌓입니다.</p>
+      </header>
+      <div class="doc-row">
+        <figure class="doc"><img src="assets/img/doc-journal.jpg" alt="자동 생성된 안전보건교육 일지" width="326" height="471"><figcaption>교육일지</figcaption></figure>
+        <figure class="doc"><img src="assets/img/doc-attendance.jpg" alt="전자서명이 포함된 참석자 명단" width="338" height="471"><figcaption>참석자 명단</figcaption></figure>
+        <figure class="doc"><img src="assets/img/doc-photos.jpg" alt="교육 사진대지" width="333" height="471"><figcaption>사진대지</figcaption></figure>
+      </div>
+      <div class="doc-more">
+        <p>사업장 요청 양식도 함께</p>
+        <ul class="tags">
+          <li>신규채용자 관리대장</li><li>자율안전 서약서</li><li>근골격계질환 증상조사표</li><li>건설근로자 2진아웃제</li><li>간이 건강검진</li>
+        </ul>
+      </div>
+      <div class="feat-grid">
+        <article class="feat">
+          <h3>관리자 대시보드</h3>
+          <p>근로자 정보와 교육이력을 통합 관리하고, 현장 교육자료를 직접 등록하며, 실무 양식을 엑셀로 내려받습니다.</p>
+        </article>
+        <article class="feat">
+          <h3>QR 체크인 · 스마트 TBM</h3>
+          <p>교육장 밖 현장에서도 모바일 QR로 참석을 확인하고 전자서명을 받습니다. TBM 기록도 함께 남깁니다.</p>
+        </article>
+        <article class="feat">
+          <h3>기존 교안 그대로</h3>
+          <p>보유한 PPT 교안을 영상 교육자료로 제작해 드립니다. 원청과 같은 과정·기록 방식을 협력사에도 적용합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES -->
+  <section class="sec roles">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">도입 효과</p>
+        <h2>누가, 무엇이 달라지나요</h2>
+      </header>
+      <div class="role-grid">
+        <article class="role"><span class="role-who">경영책임자</span><h3>이행 기록을 증빙으로</h3><p>교육 일시·대상자·내용·서명이 하나의 기록으로 보관되어, 반기 이행 점검 때 사업장별 이력을 바로 확인합니다.</p></article>
+        <article class="role"><span class="role-who">안전관리자</span><h3>교육 운영·서류 업무 경감</h3><p>근로자가 직접 교육을 진행하고, 교육일지·명단·사진대지를 따로 쓰지 않습니다. 재응시 현황도 화면에서 봅니다.</p></article>
+        <article class="role"><span class="role-who">근로자</span><h3>이해하기 쉬운 개인별 교육</h3><p>헤드셋으로 각자 수강하며 필요한 부분을 반복 시청하고, 모국어로 같은 내용을 듣습니다. 서명은 손가락으로 끝납니다.</p></article>
+        <article class="role"><span class="role-who">협력사</span><h3>원청 기준에 맞춘 운영</h3><p>협력사 주관 교육도 원청과 동일한 형식으로 이력이 남아, 제출용 자료를 따로 정리할 필요가 없습니다.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="sec proof" id="proof">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">도입 사례</p>
+        <h2>대형 건설현장에서 먼저 검증했습니다</h2>
+        <p class="sec-sub">현장 교육장에 시스템을 설치해 운영하고, 근로자와 관리자를 대상으로 설문을 실시했습니다.</p>
+      </header>
+      <div class="proof-grid">
+        <figure class="proof-photo">
+          <img src="assets/img/field-hyundai.jpg" alt="현대건설 현장 교육장에서 세이프에듀를 운영하는 모습" width="900" height="506">
+          <figcaption>현대건설 영동대로 지하공간 복합개발 2·3공구 현장 PoC</figcaption>
+        </figure>
+        <ul class="stats">
+          <li><b data-count="79">79</b><i>%</i><span>기존 강의식 교육 대비 긍정 평가</span><small>현대건설 현장 · 근로자·관리자 38명</small></li>
+          <li><b data-count="100">100</b><i>%</i><span>관리자 타 현장 적용 추천</span><small>현대건설 현장 · 관리자 4명</small></li>
+          <li><b data-count="92">92</b><i>%</i><span>시스템 만족도 ‘좋음’ 이상</span><small>DL이앤씨 이녹스 수산화리튬 Phase-1 현장 · 12명</small></li>
+        </ul>
+      </div>
+      <ol class="timeline">
+        <li><time>2023–24</time><span>세이프에듀(SAIIFEDU) 저작권 등록 · 상표 등록 제40-2184043호</span></li>
+        <li><time>2025.02</time><span>특허 등록 · 인공지능 기반 안전보건교육 시스템 및 방법 (제10-2765550호)</span></li>
+        <li><time>2025.09</time><span>한국건설안전학회 국회의원 표창</span></li>
+        <li><time>2025.11</time><span>스마트건설·AI EXPO 공모전 최우수상</span></li>
+        <li><time>2026.07</time><span>국토교통부 스마트건설 강소기업 선정</span></li>
+        <li><time>2026.10</time><span>TIPS R&amp;D 일반트랙 선정</span></li>
+      </ol>
+      <p class="fine">설문 결과는 PoC 현장 사용자 응답 기준입니다. 수상 및 선정 이력은 ㈜새임 기준입니다.</p>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="sec videos" id="videos">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">영상 자료</p>
+        <h2>영상으로 보는 세이프에듀</h2>
+      </header>
+      <div class="video-grid">
+        <a class="vcard vcard-main" href="https://www.youtube.com/watch?v=5XV__Ds61o4" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/img/field-tablet.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="vt">세이프에듀 홍보영상</span><span class="vs">YouTube · 착석부터 수료, 문서 자동화까지</span>
+        </a>
+        <a class="vcard" href="https://www.youtube.com/watch?v=isCpJXVvvGQ" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/img/yt-isCpJXVvvGQ.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="vt">건설현장 스마트 안전보건교육 솔루션</span><span class="vs">YouTube · 세이프에듀</span>
+        </a>
+        <a class="vcard" href="https://www.youtube.com/watch?v=lux4P1hYMhc" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/img/yt-lux4P1hYMhc.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="vt">AI와 함께 5분 만에 교육 서류 끝내는 법</span><span class="vs">YouTube · 세이프에듀</span>
+        </a>
+        <a class="vcard" href="https://www.youtube.com/watch?v=_NxdvRJACxo" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/img/yt-_NxdvRJACxo.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="vt">특별안전교육 · 비계의 조립, 해체 또는 변경작업</span><span class="vs">YouTube · 교육 콘텐츠 샘플</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec process">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">도입 절차</p>
+        <h2>상담부터 첫 교육까지 4단계</h2>
+      </header>
+      <ol class="proc">
+        <li><span class="n">1</span><h3>도입 상담</h3><p>현장 유형, 월 교육 인원, 필요한 교육 과정을 확인합니다.</p></li>
+        <li><span class="n">2</span><h3>현장 진단</h3><p>교육장 규모, 외국인 근로자 언어 등 운영 환경을 점검합니다.</p></li>
+        <li><span class="n">3</span><h3>시스템 구축</h3><p>태블릿·헤드셋 구성, 근로자 계정, 사업장 문서 양식을 설정합니다.</p></li>
+        <li><span class="n">4</span><h3>운영 지원</h3><p>첫 교육을 함께 진행하고, 이후 전담 매니저가 운영을 지원합니다.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="wrap faq-in">
+      <header class="sec-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>자주 묻는 질문</h2>
+      </header>
+      <div class="faq-list">
+        <details><summary>태블릿과 헤드셋은 별도로 구매해야 하나요?</summary><p>교육장 좌석 수와 교육 인원에 맞춰 장비 구성을 상담 때 함께 정합니다. 보유 장비를 쓸 수 있는지도 확인해 드립니다.</p></details>
+        <details><summary>법정 안전보건교육으로 인정되나요?</summary><p>산업안전보건법 시행규칙의 교육 내용 기준으로 표준교안을 구성하고, 교육 시간·참석자·서명 기록을 관리합니다. 교육 종류와 사업장 여건에 따라 인정 요건이 다르므로 도입 상담 때 함께 검토합니다.</p></details>
+        <details><summary>어떤 언어를 지원하나요?</summary><p>한국어, 영어, 중국어, 베트남어, 러시아어, 우즈베크어 등 현장 수요가 많은 언어로 교육 콘텐츠를 제공합니다. 필요한 언어는 상담 때 알려주세요.</p></details>
+        <details><summary>기존 교육자료를 활용할 수 있나요?</summary><p>가능합니다. 보유한 PPT 교안을 영상 교육자료로 제작해 드리며, 관리자 대시보드에서 교육자료를 직접 등록할 수도 있습니다.</p></details>
+        <details><summary>세이프버디와 함께 쓸 수 있나요?</summary><p>세이프버디는 새임의 AI 안전비서·안전경영 ERP입니다. 두 서비스의 연계 구성은 현장 여건에 맞춰 도입 상담 때 안내해 드립니다.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap contact-in">
+      <div class="contact-copy">
+        <p class="eyebrow">도입 상담</p>
+        <h2>우리 현장에 맞는지,<br>먼저 확인해 보세요</h2>
+        <p>현장 정보를 남겨 주시면 담당자가 영업일 기준 1일 이내에 연락드립니다.</p>
+        <dl class="contact-info">
+          <div><dt>대표전화</dt><dd>02-6358-5843 <small>평일 09:00–18:00</small></dd></div>
+          <div><dt>이메일</dt><dd>biz@seiim.co.kr</dd></div>
+          <div><dt>카카오톡</dt><dd><a href="https://pf.kakao.com/_JTFBG" target="_blank" rel="noopener">pf.kakao.com/_JTFBG</a></dd></div>
+        </dl>
+      </div>
+      <form class="form" id="lead-form" novalidate>
+        <div class="row2">
+          <div class="fld"><label for="f-company">회사·현장명 <i>*</i></label><input id="f-company" name="company" required autocomplete="organization" placeholder="예) ○○건설 ○○현장"></div>
+          <div class="fld"><label for="f-name">담당자 <i>*</i></label><input id="f-name" name="name" required autocomplete="name" placeholder="성함 · 직책"></div>
+        </div>
+        <div class="row2">
+          <div class="fld"><label for="f-phone">연락처 <i>*</i></label><input id="f-phone" name="phone" required type="tel" autocomplete="tel" placeholder="010-0000-0000"></div>
+          <div class="fld"><label for="f-email">이메일</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="name@company.com"></div>
+        </div>
+        <div class="row2">
+          <div class="fld"><label for="f-industry">업종</label><select id="f-industry" name="industry"><option>건설</option><option>제조</option><option>물류</option><option>플랜트</option><option>기타</option></select></div>
+          <div class="fld"><label for="f-size">월 교육 인원</label><select id="f-size" name="size"><option>50명 미만</option><option>50~200명</option><option>200~500명</option><option>500명 이상</option></select></div>
+        </div>
+        <div class="fld"><label for="f-msg">문의 내용</label><textarea id="f-msg" name="message" rows="3" placeholder="외국인 근로자 비율, 필요한 교육 과정 등"></textarea></div>
+        <label class="agree"><input type="checkbox" id="f-agree" required> 상담을 위한 개인정보 수집·이용에 동의합니다. (필수)</label>
+        <button class="btn btn-primary btn-block" type="submit">상담 신청하기</button>
+        <p class="form-msg" id="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="assets/img/logo-seiim.png" alt="SEIIM" width="214" height="96">
+      <p>주식회사 새임 (SEIIM Co., Ltd.) · 대표 성주필<br>사업자등록번호 218-81-25047<br>서울특별시 마포구 양화로 136, SVC 10층</p>
+    </div>
+    <div class="foot-col"><b>서비스</b><a href="#top">세이프에듀</a><span>세이프버디</span><span>AI CENTER</span></div>
+    <div class="foot-col"><b>고객지원</b><span>02-6358-5843</span><span>biz@seiim.co.kr</span><a href="#contact">도입 상담 신청</a></div>
+    <p class="copy">© 2026 SEIIM Co., Ltd. All rights reserved. 세이프에듀(SAIIFEDU)는 ㈜새임의 등록 상표입니다.</p>
+  </div>
+</footer>
+
+<!-- 디자인 시안 선택 바: 시안 확정 후 이 블록과 main.js의 picker 부분을 삭제 -->
+<div class="picker" role="region" aria-label="디자인 시안 선택">
+  <span class="picker-label">디자인 시안</span>
+  <div class="picker-btns" role="group">
+    <button type="button" data-style="a" aria-pressed="false"><b>A</b> 코퍼레이트</button>
+    <button type="button" data-style="b" aria-pressed="false"><b>B</b> 세이프 틸</button>
+    <button type="button" data-style="c" aria-pressed="false"><b>C</b> 현장 인더스트리얼</button>
+  </div>
+  <span class="picker-desc" id="picker-desc"></span>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
