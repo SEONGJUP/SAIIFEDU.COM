@@ -190,9 +190,34 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .home-left { display: grid; align-content: start; gap: 1cqw; }
 .home-left .app-h { margin-bottom: .4cqw; }
 .home-right { display: grid; grid-template-rows: 1fr auto; gap: 1.4cqw; min-height: 0; }
-.mini-video { position: relative; border-radius: 1.4cqw; overflow: hidden; background: url("../img/field-hyundai.jpg") 64% 40% / cover, #223; }
-.mini-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(0, 0, 0, .7)); }
-.mini-video p { position: absolute; left: 1.4cqw; right: 1.4cqw; bottom: 1.2cqw; z-index: 1; color: #fff; font-weight: 700; font-size: 1.35cqw; text-align: center; }
+/* 히어로 태블릿: 교육 영상 시청 화면 */
+.vplayer { display: flex; flex-direction: column; min-height: 0; border-radius: 1.4cqw; overflow: hidden; background: linear-gradient(180deg, #16284D, #0F1E3D); color: #fff; }
+.vp-screen { position: relative; flex: 1; min-height: 0; background: linear-gradient(rgba(15, 30, 61, .15), rgba(15, 30, 61, .55)), url("../img/field-hyundai.jpg") 64% 40% / cover, #223; }
+.vp-chapter { position: absolute; right: 1.2cqw; top: 1.2cqw; padding: .35cqw .9cqw; border-radius: 2cqw; background: rgba(15, 30, 61, .6); font-size: 1cqw; font-weight: 600; }
+.vp-btn { position: absolute; left: 50%; top: 50%; width: 4.4cqw; height: 4.4cqw; transform: translate(-50%, -50%); border-radius: 50%; background: rgba(255, 255, 255, .22); box-shadow: inset 0 0 0 .12cqw rgba(255, 255, 255, .5); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.vp-btn::before, .vp-btn::after { content: ""; position: absolute; top: 32%; width: .45cqw; height: 36%; border-radius: .2cqw; background: #fff; }
+.vp-btn::before { left: 38%; }
+.vp-btn::after { right: 38%; }
+.vp-progress { height: .4cqw; background: rgba(255, 255, 255, .15); }
+.vp-progress i { display: block; height: 100%; width: 62%; background: linear-gradient(90deg, #6E9BE3, #3F6DB4); animation: vp-prog 12s linear infinite; }
+@keyframes vp-prog { from { width: 58%; } to { width: 70%; } }
+.vp-sub, .vp-narr, .vp-langs { display: flex; align-items: center; gap: .9cqw; padding: .8cqw 1.4cqw; }
+.vp-sub { font-size: 1.25cqw; font-weight: 700; background: rgba(0, 0, 0, .25); }
+.vp-sub svg, .vp-narr svg { width: 1.3cqw; height: 1.3cqw; flex: none; opacity: .75; fill: none; }
+.vp-narr { border-top: 1px solid rgba(255, 255, 255, .08); }
+.vp-narr em { font-style: normal; font-size: 1cqw; font-weight: 600; color: #A9C2EC; }
+.wave { flex: 1; display: flex; align-items: center; justify-content: space-between; height: 1.8cqw; }
+.wave i { width: .32cqw; height: 100%; border-radius: .2cqw; background: #5F86C9; transform-origin: 50% 50%; animation: wave 1.2s ease-in-out infinite; }
+.wave i:nth-child(odd) { height: 70%; }
+.wave i:nth-child(5n) { height: 45%; }
+.wave i:nth-child(3n) { animation-delay: -.3s; }
+.wave i:nth-child(3n+1) { animation-delay: -.7s; }
+.wave i:nth-child(4n) { animation-delay: -.5s; background: #8FB0E6; }
+@keyframes wave { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+.vp-langs { padding-top: .2cqw; padding-bottom: 1cqw; gap: .6cqw; }
+.vp-langs i { font-style: normal; font-family: var(--font-flag); font-size: 1.5cqw; line-height: 1; padding: .25cqw .45cqw; border-radius: .5cqw; opacity: .7; }
+.vp-langs i.on { opacity: 1; background: rgba(255, 255, 255, .16); box-shadow: inset 0 0 0 .1cqw rgba(255, 255, 255, .35); }
+.vp-langs em { margin-left: auto; font-style: normal; font-size: 1cqw; font-weight: 700; color: #A9C2EC; }
 .app-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1cqw; }
 .app-stats div { display: grid; padding: 1.2cqw 1.5cqw; border-radius: 1.3cqw; background: var(--white); }
 .app-stats b { font-size: 2cqw; font-weight: 800; color: var(--blue-ink); }
