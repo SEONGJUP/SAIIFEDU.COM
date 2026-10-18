@@ -302,7 +302,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .hc-4 .hc-big { color: var(--blue-ink); }
 .hc-5 { background: linear-gradient(180deg, #FFFFFF, #E8EFFA); }
 .hc-docs { margin-top: auto; position: relative; height: 180px; }
-.hc-docs i { position: absolute; bottom: 0; left: 50%; width: 120px; height: 160px; border-radius: 8px; background: var(--white); box-shadow: 0 10px 30px rgba(0, 0, 0, .12); background-image: repeating-linear-gradient(transparent 0 16px, #E3EAF5 16px 18px); background-position: 0 30px; }
+.hc-docs i { position: absolute; bottom: 0; left: 50%; width: 120px; height: 160px; border-radius: 8px; overflow: hidden; background: var(--white); box-shadow: 0 10px 30px rgba(0, 0, 0, .14), 0 0 0 1px rgba(28, 53, 102, .06); }
+/* 실제 문서 이미지를 흐리게 깔아 내용은 읽히지 않고 형태만 보이게 */
+.hc-docs i::before { content: ""; position: absolute; inset: -4px; background: var(--doc) center top / cover no-repeat; filter: blur(1.1px); }
+.hc-docs i:nth-child(1) { --doc: url("../img/doc-journal.jpg"); }
+.hc-docs i:nth-child(2) { --doc: url("../img/doc-attendance.jpg"); }
+.hc-docs i:nth-child(3) { --doc: url("../img/doc-photos.jpg"); }
 .hc-docs i:nth-child(1) { transform: translateX(-120%) rotate(-8deg); }
 .hc-docs i:nth-child(2) { transform: translateX(-50%) translateY(-14px); z-index: 1; }
 .hc-docs i:nth-child(3) { transform: translateX(20%) rotate(8deg); }
