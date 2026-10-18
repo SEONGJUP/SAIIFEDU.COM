@@ -107,12 +107,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .link-arrow:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* ===================== 내비 ===================== */
-.gbar { background: var(--white); color: var(--gray); font-size: 12px; border-bottom: 1px solid var(--line); }
+.gbar { background: #0F1E3D; color: #C6D3E8; font-size: 12px; }
 .gbar-in { display: flex; align-items: center; gap: 28px; height: 44px; }
-.gbar-logo { height: 18px; width: auto; filter: brightness(0) invert(17%) sepia(40%) saturate(1900%) hue-rotate(200deg) brightness(95%); }
+.gbar-brand { display: inline-flex; align-items: center; gap: 10px; opacity: 1 !important; color: #FFFFFF; }
+.gbar-logo { height: 22px; width: auto; }
+.gbar-brand span { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
 .gbar nav { display: flex; gap: 24px; }
 .gbar a, .gbar span { text-decoration: none; opacity: .8; }
-.gbar a[aria-current] { opacity: 1; color: var(--ink); font-weight: 600; }
+.gbar a[aria-current] { opacity: 1; color: #FFFFFF; font-weight: 600; }
 
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 99; background: rgba(255, 255, 255, .92); }
 .lnav {
@@ -124,7 +126,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   border-bottom: 1px solid var(--line);
 }
 .lnav-in { display: flex; align-items: center; gap: 24px; height: 52px; }
-.lnav-title { font-size: 20px; font-weight: 700; text-decoration: none; letter-spacing: -0.03em; }
+.lnav-title { display: inline-flex; align-items: center; text-decoration: none; }
+.lnav-title img { height: 24px; width: auto; }
 .lnav-links { display: flex; gap: 22px; margin-left: auto; font-size: 13px; }
 .lnav-links a { text-decoration: none; color: var(--gray); transition: color .2s; }
 .lnav-links a:hover { color: var(--blue-ink); }
@@ -218,6 +221,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .reveal .w { transition: color .3s; color: var(--dim); }
 .reveal .w.on { color: var(--ink); }
 .reveal .w.hl.on { color: var(--blue-ink); }
+
+/* ===================== seiim.co.kr 공식 소개 이미지 ===================== */
+.official { background: var(--white); padding-block: 0 clamp(80px, 10vw, 120px); }
+.official-fig { margin: 0 auto; max-width: 900px; border-radius: var(--r-card); overflow: hidden; box-shadow: 0 40px 80px -40px rgba(15, 30, 61, .45); }
+.official-fig img { width: 100%; height: auto; }
 
 /* ===================== 3. 하이라이트 ===================== */
 .highlights { background: var(--light); padding-block: clamp(80px, 10vw, 130px); }
