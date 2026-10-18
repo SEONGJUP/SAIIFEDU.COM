@@ -217,7 +217,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ===================== 2. 한 문장 ===================== */
 .statement { --p: 0; padding-block: clamp(100px, 14vw, 180px); background: var(--white); }
-.reveal { font-size: clamp(28px, 4.4vw, 56px); font-weight: 700; line-height: 1.32; letter-spacing: -0.035em; color: var(--ink); max-width: 980px; }
+.reveal { font-size: clamp(24px, 4.2vw, 54px); font-weight: 700; line-height: 1.32; letter-spacing: -0.035em; color: var(--ink); max-width: 980px; }
+/* 문장마다 새 줄, 줄바꿈은 구절 사이에서만 */
+.reveal .sent { display: block; text-wrap: balance; }
+.reveal .sent + .sent { margin-top: .32em; }
+.reveal .ph { white-space: nowrap; }
 .reveal .w { transition: color .3s; color: var(--dim); }
 .reveal .w.on { color: var(--ink); }
 .reveal .w.hl.on { color: var(--blue-ink); }

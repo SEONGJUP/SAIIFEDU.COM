@@ -10,10 +10,13 @@
   var words = [];
   if (reveal && !reduce) {
     var HL = ['태블릿', '모국어로', '손가락으로', '이미', '완성되어'];
-    reveal.innerHTML = reveal.textContent.trim().split(/\s+/).map(function (w) {
-      var hl = HL.some(function (h) { return w.indexOf(h) === 0; });
-      return '<span class="w' + (hl ? ' hl' : '') + '">' + w + '</span>';
-    }).join(' ');
+    // 문장(.sent)·구절(.ph) 구조는 그대로 두고, 구절 안의 단어만 쪼갠다
+    $$('.ph', reveal).forEach(function (ph) {
+      ph.innerHTML = ph.textContent.trim().split(/\s+/).map(function (w) {
+        var hl = HL.some(function (h) { return w.indexOf(h) === 0; });
+        return '<span class="w' + (hl ? ' hl' : '') + '">' + w + '</span>';
+      }).join(' ');
+    });
     words = $$('.w', reveal);
   }
 
