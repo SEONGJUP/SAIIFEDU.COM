@@ -172,20 +172,36 @@
       </header>
       <div class="sys-body">
         <div class="sys-device">
-          <figure class="sys-screen" data-view="dashboard">
+          <figure class="sys-screen" data-view="tablet">
             <div class="sys-monitor">
               <div class="sys-browser"><i></i><i></i><i></i><span>saiifedu.seiim.com</span></div>
               <img src="assets/img/ui-admin-wide.jpg" alt="세이프에듀 PC 관리자 대시보드 화면" width="746" height="473" loading="lazy">
             </div>
             <span class="sys-stand" aria-hidden="true"></span>
             <div class="sys-tab">
-              <img src="assets/img/ui-login.jpg" alt="세이프에듀 근로자용 태블릿 교육 화면" width="501" height="372" loading="lazy">
+              <div class="st-frame">
+                <div class="st-screen">
+                  <p class="st-live"><i></i>교육영상 재생 중</p>
+                  <div class="st-bar"><i></i></div>
+                  <span class="st-play" aria-hidden="true"></span>
+                  <div class="st-ai">
+                    <p class="st-ai-h"><i></i>AI ANALYSIS</p>
+                    <div class="st-row"><span>집중도</span><b class="g"><i style="width:95%"></i></b><em class="g">95%</em></div>
+                    <div class="st-row"><span>참여</span><b class="bl"><i style="width:92%"></i></b><em class="bl">92%</em></div>
+                  </div>
+                  <div class="st-title"><small>특별안전보건교육</small><p>밀폐공간 질식재해 예방 및 응급조치 요령</p></div>
+                  <span class="st-cam" aria-hidden="true"><i></i><i></i></span>
+                  <span class="st-home" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="st-float st-check"><span class="st-ic ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><small>출석확인</small><b>안면인식 완료</b></div></div>
+              <div class="st-float st-prog"><span class="st-ic pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg></span><div><small>교육 진행률</small><b>67% 수강 중</b></div></div>
             </div>
             <figcaption><span class="cap-dash">PC 관리자 대시보드</span><span class="cap-tab">근로자 태블릿 교육 화면</span></figcaption>
           </figure>
           <div class="sys-toggle" role="group" aria-label="화면 선택">
-            <button type="button" data-view="tablet" aria-pressed="false">태블릿</button>
-            <button type="button" data-view="dashboard" aria-pressed="true">대시보드</button>
+            <button type="button" data-view="tablet" aria-pressed="true">태블릿</button>
+            <button type="button" data-view="dashboard" aria-pressed="false">대시보드</button>
           </div>
         </div>
         <ul class="sys-feats">
