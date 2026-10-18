@@ -111,4 +111,14 @@
     nums.forEach(function (n) { co.observe(n); });
   }
 
+  /* ---------- 소개 섹션: 태블릿 / 대시보드 화면 전환 ---------- */
+  var sysScreen = $('.sys-screen');
+  var sysBtns = $$('.sys-toggle button');
+  sysBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-view');
+      sysScreen.setAttribute('data-view', v);
+      sysBtns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    });
+  });
 })();
