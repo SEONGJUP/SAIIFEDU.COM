@@ -108,25 +108,4 @@
     nums.forEach(function (n) { co.observe(n); });
   }
 
-  /* ---------- 상담 폼 (접수 API 연결 전: 검증 후 안내) ---------- */
-  var form = $('#lead-form');
-  var msg = $('#form-msg');
-  if (form) form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var bad = null;
-    $$('[required]', form).forEach(function (el) {
-      var ok = el.type === 'checkbox' ? el.checked : el.value.trim() !== '';
-      el.setAttribute('aria-invalid', ok ? 'false' : 'true');
-      if (!ok && !bad) bad = el;
-    });
-    if (bad) {
-      msg.className = 'form-msg err';
-      msg.textContent = '회사·현장명, 담당자, 연락처를 입력하고 개인정보 수집·이용에 동의해 주세요.';
-      bad.focus();
-      return;
-    }
-    // TODO: 접수 API(또는 폼 서비스) 연결 후 fetch로 전송
-    msg.className = 'form-msg ok';
-    msg.textContent = '입력 확인 완료. 온라인 접수 연결 전이므로 02-6358-5843 또는 biz@seiim.co.kr로 연락 주시면 바로 안내드립니다.';
-  });
 })();

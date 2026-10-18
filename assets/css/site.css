@@ -357,6 +357,41 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .swatches button[aria-checked="true"] em { color: var(--ink); }
 .fade { opacity: 0; }
 
+/* ===================== 5-2. AI 교육자료 자동 생성 ===================== */
+.gen { padding-block: clamp(100px, 12vw, 160px); background: linear-gradient(180deg, var(--soft), var(--white)); }
+.gen-flow { margin-top: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; counter-reset: none; }
+.gen-step { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 28px; border-radius: var(--r-card); background: var(--white); box-shadow: 0 20px 50px -30px rgba(28, 53, 102, .35); min-width: 0; }
+.gen-step + .gen-step::before { content: ""; position: absolute; left: -20px; top: 50%; width: 20px; border-top: 2px dashed var(--dim); }
+.gen-n { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--blue); color: var(--on-blue); font-weight: 800; font-size: 14px; }
+.gen-step h3 { font-size: 22px; font-weight: 700; }
+.gen-step p { color: var(--gray); font-size: 15px; font-weight: 500; }
+.gen-vis { height: 170px; margin-block: 6px 8px; border-radius: 18px; background: var(--light); display: grid; place-items: center; align-content: center; gap: 10px; padding: 16px; overflow: hidden; }
+.file { width: 100%; max-width: 240px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 4px 10px; padding: 10px 12px; border-radius: 12px; background: var(--white); box-shadow: 0 6px 16px rgba(28, 53, 102, .1); }
+.file b { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-ic { grid-row: span 2; width: 34px; height: 40px; display: grid; place-items: center; border-radius: 6px; background: #E5484D; color: #fff; font-size: 10px; font-weight: 800; }
+.file-ic.img { background: var(--blue); }
+.file-2 .file-ic { grid-row: auto; }
+.file-bar { height: 5px; border-radius: 3px; background: var(--soft); overflow: hidden; }
+.file-bar i { display: block; height: 100%; width: 100%; background: var(--blue); transform-origin: 0 50%; animation: upload 4.5s var(--ease) infinite; }
+@keyframes upload { 0% { transform: scaleX(0); } 45%, 100% { transform: scaleX(1); } }
+.langs-pick { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 230px; }
+.langs-pick i { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--white); font-style: normal; font-family: var(--font-flag); font-size: 22px; line-height: 1; opacity: .45; box-shadow: inset 0 0 0 1px var(--line); }
+.langs-pick i.on { opacity: 1; box-shadow: 0 0 0 2px var(--blue); }
+.langs-pick em { height: 40px; padding: 0 12px; display: grid; place-items: center; border-radius: 20px; background: var(--white); font-style: normal; font-weight: 700; font-size: 13px; color: var(--blue-ink); box-shadow: inset 0 0 0 1px var(--line); }
+.pick-note { font-size: 12px !important; font-weight: 600 !important; }
+.mp4 { position: relative; width: 100%; max-width: 250px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: linear-gradient(135deg, #24467F, #0F1E3D 60%); }
+.mp4 .play { width: 42px; height: 42px; }
+.mp4 .play::after { left: 16px; top: 12px; border-left-width: 13px; border-block-width: 9px; }
+.mp4-sub { position: absolute; left: 8px; right: 8px; bottom: 8px; padding: 3px 6px; border-radius: 4px; background: rgba(0, 0, 0, .6); color: #fff; font-size: 10px; font-weight: 600; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mp4-tag { position: absolute; right: 8px; top: 8px; padding: 2px 7px; border-radius: 4px; background: var(--white); color: var(--ink); font-size: 10px; font-weight: 800; }
+.law-band { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 12px; }
+.law-band b { font-weight: 800; color: var(--ink); margin-right: 4px; }
+.law-band span { padding: 7px 14px; border-radius: 999px; background: var(--white); font-size: 14px; font-weight: 600; color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
+@media (max-width: 860px) {
+  .gen-flow { grid-template-columns: 1fr; gap: 28px; }
+  .gen-step + .gen-step::before { left: 50%; top: -28px; width: 0; height: 28px; border-top: 0; border-left: 2px dashed var(--dim); }
+}
+
 /* ===================== 6. AI 집중도 ===================== */
 .ai { background: var(--white); padding-block: clamp(100px, 12vw, 160px); }
 .ai-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(40px, 6vw, 80px); align-items: center; }
@@ -449,38 +484,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .film b { font-size: 17px; font-weight: 700; line-height: 1.4; }
 .film span:last-child { font-size: 14px; color: var(--gray); }
 @media (max-width: 760px) { .film-row { grid-template-columns: 1fr; } }
-
-/* ===================== 11. 상담 ===================== */
-.contact { padding-block: clamp(100px, 12vw, 160px); background: var(--light); }
-.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 80px); align-items: start; }
-.steps4 { margin-top: 36px; display: grid; gap: 0; counter-reset: s; border-top: 1px solid var(--line); }
-.steps4 li { counter-increment: s; display: grid; grid-template-columns: 36px 120px 1fr; gap: 8px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.steps4 li::before { content: counter(s); font-weight: 800; color: var(--blue-ink); }
-.steps4 b { font-weight: 700; }
-.steps4 span { color: var(--gray); font-size: 15px; }
-.contact-info { margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 12px 40px; }
-.contact-info dt { font-size: 13px; color: var(--gray); }
-.contact-info dd { margin: 2px 0 0; font-size: 20px; font-weight: 700; user-select: all; }
-.form { display: grid; gap: 12px; padding: clamp(24px, 4vw, 40px); border-radius: var(--r-card); background: var(--white); box-shadow: 0 30px 70px -40px rgba(28, 53, 102, .35); }
-.form-title { font-size: 24px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.03em; }
-.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.fld { position: relative; min-width: 0; }
-.fld input, .fld select, .fld textarea { width: 100%; padding: 26px 16px 10px; border-radius: 14px; border: 1px solid var(--line); background: var(--white); color: var(--ink); font-size: 17px; appearance: none; transition: border-color .2s, box-shadow .2s; }
-.fld textarea { resize: vertical; }
-.fld label { position: absolute; left: 17px; top: 18px; font-size: 17px; color: var(--gray); pointer-events: none; transition: top .2s var(--ease), font-size .2s var(--ease); }
-.fld input:focus + label, .fld input:not(:placeholder-shown) + label,
-.fld textarea:focus + label, .fld textarea:not(:placeholder-shown) + label,
-.fld.sel label { top: 8px; font-size: 12px; }
-.fld.sel::after { content: ""; position: absolute; right: 18px; top: 50%; width: 8px; height: 8px; border-right: 2px solid var(--gray); border-bottom: 2px solid var(--gray); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
-.fld input:focus, .fld select:focus, .fld textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(63, 109, 180, .2); }
-.fld [aria-invalid="true"] { border-color: #E3402F; }
-.agree { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--gray); margin-block: 4px 8px; }
-.agree input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--blue-2); }
-.form-msg { font-size: 14px; min-height: 1.4em; }
-.form-msg.ok { color: var(--blue-ink); font-weight: 700; }
-.form-msg.err { color: #C9361F; }
-@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
-@media (max-width: 480px) { .row2 { grid-template-columns: 1fr; } .steps4 li { grid-template-columns: 28px 1fr; } .steps4 span { grid-column: 2; } }
 
 /* ===================== 푸터 ===================== */
 .foot { background: var(--white); color: var(--gray); font-size: 12px; line-height: 1.6; padding-block: 28px 40px; border-top: 1px solid var(--line); }
