@@ -505,9 +505,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .nums { margin-top: clamp(48px, 6vw, 80px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; text-align: center; }
 .nums b { display: block; font-size: clamp(64px, 9vw, 120px); font-weight: 800; line-height: 1; letter-spacing: -0.05em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-variant-numeric: tabular-nums; }
 .nums p { margin-top: 14px; font-size: 18px; font-weight: 600; color: var(--ink-2); line-height: 1.45; }
-.wide-photo { margin: clamp(60px, 8vw, 100px) 0 0; }
-.wide-photo img { width: 100%; max-height: 72vh; object-fit: cover; }
-.wide-photo figcaption { margin-top: 14px; font-size: 13px; color: var(--gray); }
+.install { margin-top: clamp(56px, 7vw, 88px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.install li { border-radius: 20px; overflow: hidden; background: var(--soft); box-shadow: 0 20px 40px -28px rgba(15, 30, 61, .45); }
+.install img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s var(--ease); }
+.install li:hover img { transform: scale(1.04); }
+.install-cap { margin-top: 14px; font-size: 13px; color: var(--gray); text-align: center; }
+@media (max-width: 760px) { .install { grid-template-columns: 1fr; } }
 .awards { margin-top: clamp(48px, 6vw, 72px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
 .awards li { display: grid; gap: 8px; padding-top: 18px; border-top: 1px solid var(--line); }
 .awards time { font-size: 13px; font-weight: 700; color: var(--blue-ink); font-variant-numeric: tabular-nums; }
